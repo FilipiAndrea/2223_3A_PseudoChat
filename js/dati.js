@@ -83,7 +83,6 @@ var messaggi = [
 ];
 
 var nomeUtenti = [
-    "Ut",
     "Mario",
     "Maria",
     "Elena",
@@ -92,7 +91,6 @@ var nomeUtenti = [
 ];
 
 var cognomeUtenti = [
-    "Login",
     "Rossi",
     "Bianchi",
     "Strada",
@@ -101,7 +99,6 @@ var cognomeUtenti = [
 ];
 
 var genereUt = [
-    "m",
     "m",
     "f",
     "f",

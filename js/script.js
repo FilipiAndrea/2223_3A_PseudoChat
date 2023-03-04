@@ -8,6 +8,9 @@
         # sotto l'icona dovrà essere rafficurato il nome con l'iniziale maiuscola del nome e l'iniziale maiuscola del cognome
         # il cognome dovrà essere troncato e seguito da . (come si vede nel file originale)
 
+
+
+
     - aggiornare automaticamente l'header della sezione nel momento in cui clicco su un utente dell'aside
         # modificare l'icona
         # modificare il nome e cognome
@@ -20,3 +23,52 @@
         #se il campo di testo non è vuoto aggiungere il messaggio in coda agli altri del personaggio selezionato
 
 */
+
+
+function mostraUtenti(){
+
+    let lista = ``;
+    
+    let listaUtenti = document.getElementById("listUtenti"); 
+
+    for(i in nomeUtenti){
+        if(genereUt[i] == 'm'){
+            lista += maschio(i);
+        }else{
+            lista += femmina(i);
+        }
+    }
+
+    console.log(lista);
+
+    listaUtenti.innerHTML = lista;
+
+
+}
+
+
+function maschio(i){
+    return `
+    <li>
+        <div class="material-symbols-outlined icone">
+            face
+        </div>
+        ${nomeUtenti[i]}
+        ${cognomeUtenti[i]}
+    </li>
+    
+    `;
+}
+
+function femmina(i){
+    return `
+    <li>
+        <div class="material-symbols-outlined icone">
+            face_3
+        </div>
+        ${nomeUtenti[i]}
+        ${cognomeUtenti[i]}
+    </li>
+    
+    `;
+}
