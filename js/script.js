@@ -25,6 +25,7 @@
 */
 
 
+
 function mostraUtenti(){
 
     let lista = ``;
@@ -47,10 +48,14 @@ function mostraUtenti(){
 }
 
 
+
+
+
+
 function maschio(i){
     return `
     <li>
-        <div class="material-symbols-outlined icone">
+        <div class="material-symbols-outlined icone" onclick="header()">
             face
         </div>
         ${nomeUtenti[i]}
@@ -63,12 +68,44 @@ function maschio(i){
 function femmina(i){
     return `
     <li>
-        <div class="material-symbols-outlined icone">
+        <div class="material-symbols-outlined icone" onclick="header()">
             face_3
         </div>
         ${nomeUtenti[i]}
         ${cognomeUtenti[i]}
     </li>
     
+    `;
+}
+
+
+
+
+
+function header(){
+    console.log(nomeUtenti[0]);
+
+    let heads = ``;
+
+    let header = document.querySelector("header");
+
+    pos = 0;
+
+    heads = mostraHeader(pos);
+
+    header.innerHTML = heads;
+    
+}
+
+
+function mostraHeader(i){
+    return`
+    <div class="material-symbols-outlined icone">
+        face
+    </div>
+    <div>
+        <div id="divNome">${nomeUtenti[i]} ${cognomeUtenti}</div>
+        <div id="divUltimoMes">Oggi alle 9:45</div>
+    </div>
     `;
 }
